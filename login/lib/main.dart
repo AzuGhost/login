@@ -10,6 +10,18 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          title: Text('PADORU'),
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("images/padoru.gif"),
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+        ),
         body: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -94,8 +106,7 @@ class _LoginFormState extends State<LoginForm> {
             width: double.infinity,
             child: ElevatedButton(
               child: Text('Login'),
-              onPressed: () {
-              },
+              onPressed: () {},
             ),
           ),
         ),
